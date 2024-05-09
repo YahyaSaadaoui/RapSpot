@@ -1,32 +1,8 @@
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"Figtree","arguments":[{"subsets":["latin"]}],"variableName":"font"} ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/* latin-ext */
-@font-face {
-  font-family: '__Figtree_d680cf';
-  font-style: normal;
-  font-weight: 300 900;
-  font-display: swap;
-  src: url(/_next/static/media/5f8bef30161d4c4f-s.woff2) format('woff2');
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: '__Figtree_d680cf';
-  font-style: normal;
-  font-weight: 300 900;
-  font-display: swap;
-  src: url(/_next/static/media/192e369fd43210ef-s.p.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}@font-face {font-family: '__Figtree_Fallback_d680cf';src: local("Arial");ascent-override: 93.60%;descent-override: 24.63%;line-gap-override: 0.00%;size-adjust: 101.49%
-}.__className_d680cf {font-family: '__Figtree_d680cf', '__Figtree_Fallback_d680cf';font-style: normal
-}
-
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/globals.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[12].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -53,20 +29,17 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
 */
 
-html,
-:host {
+html {
   line-height: 1.5; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
-  -webkit-tap-highlight-color: transparent; /* 7 */
 }
 
 /*
@@ -133,10 +106,8 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -144,9 +115,7 @@ kbd,
 samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
-  font-feature-settings: normal; /* 2 */
-  font-variation-settings: normal; /* 3 */
-  font-size: 1em; /* 4 */
+  font-size: 1em; /* 2 */
 }
 
 /*
@@ -201,8 +170,6 @@ optgroup,
 select,
 textarea {
   font-family: inherit; /* 1 */
-  font-feature-settings: inherit; /* 1 */
-  font-variation-settings: inherit; /* 1 */
   font-size: 100%; /* 1 */
   font-weight: inherit; /* 1 */
   line-height: inherit; /* 1 */
@@ -337,13 +304,6 @@ ul,
 menu {
   list-style: none;
   margin: 0;
-  padding: 0;
-}
-
-/*
-Reset default styling for dialogs.
-*/
-dialog {
   padding: 0;
 }
 
@@ -531,11 +491,17 @@ video {
 .inset-0 {
   inset: 0px;
 }
-.right-5 {
-  right: 1.25rem;
+.bottom-0 {
+  bottom: 0px;
+}
+.bottom-24 {
+  bottom: 6rem;
 }
 .left-\[50\%\] {
   left: 50%;
+}
+.right-5 {
+  right: 1.25rem;
 }
 .right-\[10px\] {
   right: 10px;
@@ -546,12 +512,6 @@ video {
 .top-\[50\%\] {
   top: 50%;
 }
-.bottom-0 {
-  bottom: 0px;
-}
-.bottom-24 {
-  bottom: 6rem;
-}
 .col-auto {
   grid-column: auto;
 }
@@ -561,17 +521,20 @@ video {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .mb-7 {
   margin-bottom: 1.75rem;
 }
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
 .mt-4 {
   margin-top: 1rem;
-}
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 .flex {
   display: flex;
@@ -588,6 +551,21 @@ video {
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+.h-10 {
+  height: 2.5rem;
+}
+.h-32 {
+  height: 8rem;
+}
+.h-\[25px\] {
+  height: 25px;
+}
+.h-\[3px\] {
+  height: 3px;
+}
+.h-\[80px\] {
+  height: 80px;
+}
 .h-auto {
   height: auto;
 }
@@ -598,29 +576,26 @@ video {
 .h-full {
   height: 100%;
 }
-.h-\[25px\] {
-  height: 25px;
-}
-.h-10 {
-  height: 2.5rem;
-}
-.h-\[3px\] {
-  height: 3px;
-}
-.h-\[80px\] {
-  height: 80px;
-}
-.h-\[calc\(100\%-80px\)\] {
-  height: calc(100% - 80px);
-}
 .max-h-full {
   max-height: 100%;
+}
+.min-h-\[48px\] {
+  min-height: 48px;
 }
 .min-h-\[64px\] {
   min-height: 64px;
 }
-.min-h-\[48px\] {
-  min-height: 48px;
+.w-10 {
+  width: 2.5rem;
+}
+.w-32 {
+  width: 8rem;
+}
+.w-\[120px\] {
+  width: 120px;
+}
+.w-\[25px\] {
+  width: 25px;
 }
 .w-\[300px\] {
   width: 300px;
@@ -628,23 +603,11 @@ video {
 .w-full {
   width: 100%;
 }
-.w-\[25px\] {
-  width: 25px;
-}
-.w-10 {
-  width: 2.5rem;
-}
-.w-\[120px\] {
-  width: 120px;
-}
-.w-auto {
-  width: auto;
+.min-w-\[48px\] {
+  min-width: 48px;
 }
 .min-w-\[64px\] {
   min-width: 64px;
-}
-.min-w-\[48px\] {
-  min-width: 48px;
 }
 .max-w-\[722px\] {
   max-width: 722px;
@@ -659,12 +622,12 @@ video {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.translate-y-\[-50\%\] {
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .translate-y-1\/4 {
   --tw-translate-y: 25%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-\[-50\%\] {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-pointer {
@@ -716,16 +679,28 @@ video {
 .gap-3 {
   gap: 0.75rem;
 }
-.gap-2 {
-  gap: 0.5rem;
-}
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
 }
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
 .gap-x-4 {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
+}
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.gap-y-1 {
+  row-gap: 0.25rem;
 }
 .gap-y-2 {
   row-gap: 0.5rem;
@@ -733,16 +708,8 @@ video {
 .gap-y-4 {
   row-gap: 1rem;
 }
-.gap-x-3 {
-  -moz-column-gap: 0.75rem;
-       column-gap: 0.75rem;
-}
-.gap-y-1 {
-  row-gap: 0.25rem;
-}
-.gap-x-6 {
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+.gap-y-6 {
+  row-gap: 1.5rem;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -767,12 +734,12 @@ video {
 .border {
   border-width: 1px;
 }
-.border-transparent {
-  border-color: transparent;
-}
 .border-neutral-700 {
   --tw-border-opacity: 1;
   border-color: rgb(64 64 64 / var(--tw-border-opacity));
+}
+.border-transparent {
+  border-color: transparent;
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -785,24 +752,6 @@ video {
 .bg-neutral-100\/10 {
   background-color: rgb(245 245 245 / 0.1);
 }
-.bg-neutral-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
-}
-.bg-transparent {
-  background-color: transparent;
-}
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-neutral-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-.bg-neutral-900\/90 {
-  background-color: rgb(23 23 23 / 0.9);
-}
 .bg-neutral-400\/5 {
   background-color: rgb(163 163 163 / 0.05);
 }
@@ -813,6 +762,24 @@ video {
 .bg-neutral-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(64 64 64 / var(--tw-bg-opacity));
+}
+.bg-neutral-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
+.bg-neutral-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+.bg-neutral-900\/90 {
+  background-color: rgb(23 23 23 / 0.9);
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
@@ -826,8 +793,14 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.p-1 {
+  padding: 0.25rem;
+}
 .p-2 {
   padding: 0.5rem;
+}
+.p-3 {
+  padding: 0.75rem;
 }
 .p-4 {
   padding: 1rem;
@@ -837,12 +810,6 @@ video {
 }
 .p-\[25px\] {
   padding: 25px;
-}
-.p-1 {
-  padding: 0.25rem;
-}
-.p-3 {
-  padding: 0.75rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -880,11 +847,8 @@ video {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
-.pr-4 {
-  padding-right: 1rem;
-}
-.pt-4 {
-  padding-top: 1rem;
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -892,8 +856,11 @@ video {
 .pr-2 {
   padding-right: 0.5rem;
 }
-.pb-1 {
-  padding-bottom: 0.25rem;
+.pr-4 {
+  padding-right: 1rem;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .text-center {
   text-align: center;
@@ -905,6 +872,10 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .text-sm {
   font-size: 0.875rem;
@@ -1010,12 +981,12 @@ color-scheme: dark;
   background-color: rgb(245 245 245 / 0.2);
 }
 
-.hover\:bg-neutral-800\/50:hover {
-  background-color: rgb(38 38 38 / 0.5);
-}
-
 .hover\:bg-neutral-400\/10:hover {
   background-color: rgb(163 163 163 / 0.1);
+}
+
+.hover\:bg-neutral-800\/50:hover {
+  background-color: rgb(38 38 38 / 0.5);
 }
 
 .hover\:text-white:hover {
@@ -1054,9 +1025,22 @@ color-scheme: dark;
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 768px) {
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .md\:block {
+    display: block;
+  }
 
   .md\:flex {
     display: flex;
@@ -1085,6 +1069,26 @@ color-scheme: dark;
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .lg\:h-44 {
+    height: 11rem;
+  }
+
+  .lg\:w-44 {
+    width: 11rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1100,3 +1104,27 @@ color-scheme: dark;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[12].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"Figtree","arguments":[{"subsets":["latin"]}],"variableName":"figtree"} ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* latin-ext */
+@font-face {
+  font-family: '__Figtree_d680cf';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(/_next/static/media/5f8bef30161d4c4f-s.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: '__Figtree_d680cf';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(/_next/static/media/192e369fd43210ef-s.p.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@font-face {font-family: '__Figtree_Fallback_d680cf';src: local("Arial");ascent-override: 93.60%;descent-override: 24.63%;line-gap-override: 0.00%;size-adjust: 101.49%
+}.__className_d680cf {font-family: '__Figtree_d680cf', '__Figtree_Fallback_d680cf';font-style: normal
+}
+

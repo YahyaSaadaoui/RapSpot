@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation"
 import useAuthModal from "@/hooks/useAuthModal"
 
 import Modal from "./Modal"
-import { getURL } from "@/app/utils/getURL"
+import { getURL } from "@/app/utilis/getURL"
 
 const AuthModal = () => {
   const { session } = useSessionContext()
@@ -35,7 +35,7 @@ const AuthModal = () => {
     <Modal title="Welcome back" description="Login to your account." isOpen={isOpen} onChange={onChange}>
       <Auth
         supabaseClient={supabaseClient}
-        providers={["github","google","facebook"]}
+        providers={["github","google","discord"]}
         redirectTo={getURL()}
         magicLink={true}
         appearance={{
