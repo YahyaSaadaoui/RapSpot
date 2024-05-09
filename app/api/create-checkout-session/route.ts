@@ -3,7 +3,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 
 import { stripe } from "@/libs/stripe"
-import { getURL } from "@/app/utils/getURL"
+import { getURL } from "@/app/utilis/getURL"
 import { createOrRetrieveCustomer } from "@/libs/supabaseAdmin"
 
 export async function POST(request: Request) {
