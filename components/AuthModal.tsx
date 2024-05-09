@@ -35,7 +35,7 @@ const AuthModal = () => {
     <Modal title="Welcome back" description="Login to your account." isOpen={isOpen} onChange={onChange}>
       <Auth
         supabaseClient={supabaseClient}
-        providers={["github","google","discord"]}
+        providers={["github","discord","twitch"]}
         redirectTo={getURL()}
         magicLink={true}
         appearance={{
