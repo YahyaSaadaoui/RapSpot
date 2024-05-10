@@ -32,7 +32,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onChange, title, description, chi
             max-h-full 
             h-full 
             md:h-auto 
-            md:max-h-[100vh] 
+            md:max-h-[95vh] 
             w-full 
             md:w-[90vw] 
             md:max-w-[450px] 

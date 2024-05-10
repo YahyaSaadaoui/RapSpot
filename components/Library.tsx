@@ -5,7 +5,7 @@ import useAuthModal from "@/hooks/useAuthModal"
 import { useUser } from "@/hooks/useUser"
 import useUploadModal from "@/hooks/useUploadModal"
 import { Song } from "@/types"
-import MediaItem from "@/components/MediaItem"
+import MediaItem from "./MediaItem"
 import useOnPlay from "@/hooks/useOnPlay"
 import useSubscribeModal from "@/hooks/useSubscribeModal"
 
@@ -44,12 +44,11 @@ const Library = ({ songs }: LibraryProps) => {
           size={20}
         />
       </div>
-<div className="flex flex-col gap-y-2 mt-4 px-3">
-  {songs && songs.map(song => (
-    <MediaItem onClick={(id: string) => onPlay(id)} key={song.id} data={song} />
-  ))}
-</div>
-
+      <div className="flex flex-col gap-y-2 mt-4 px-3">
+        {songs.map(song => (
+          <MediaItem onClick={(id: string) => onPlay(id)} key={song.id} data={song} />
+        ))}
+      </div>
     </div>
   )
 }
