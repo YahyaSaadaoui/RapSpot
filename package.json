@@ -28,6 +28,7 @@
     "tailwind-merge": "^2.2.2",
     "uniqid": "^5.4.0",
     "use-sound": "^4.0.1",
+    "vercel": "^34.1.10",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
