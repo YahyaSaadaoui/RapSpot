@@ -16,7 +16,7 @@ interface SidebarProps {
   children: React.ReactNode
   songs: Song[]
 }
-
+// cjsa
 const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
   const pathname = usePathname()
   const player = usePlayer()
