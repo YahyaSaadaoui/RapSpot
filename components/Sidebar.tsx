@@ -38,7 +38,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
       },
       // eslint-disable-next-line react-hooks/exhaustive-deps
     ],
-    [],
+    [pathname],
   )
 
   return (
