@@ -13,7 +13,7 @@ import getActiveProductsWithPrices from "@/actions/getActiveProductsWithPrices"
 const figtree = Figtree({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Sponify",
+  title: "Rapify",
   description: "Listen to music!",
 }
 
