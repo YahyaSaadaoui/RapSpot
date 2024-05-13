@@ -13,8 +13,8 @@ import getActiveProductsWithPrices from "@/actions/getActiveProductsWithPrices"
 const figtree = Figtree({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Rapify",
-  description: "Listen to music!",
+  title: "RapSpot",
+  description: "Welcome to RapSpot, your ultimate destination for all things rap. Discover, stream, and vibe to the hottest beats and latest tracks from your favorite artists. With curated playlists, personalized recommendations, and exclusive content, immerse yourself in the world of rap like never before. Join the community, express yourself, and let the rhythm guide you. It's more than music, it's a lifestyle. RapSpot - Where Rap Lives.",
 }
 
 export const revalidate = 0
