@@ -25,10 +25,9 @@ const Library = ({ songs }: LibraryProps) => {
     if (!user) {
       return authModal.onOpen()
     }
-    // RE Activate Sub
-    // if (!subscription) {
-    //   return subscribeModal.onOpen()
-    // }
+    if (!subscription) {
+      return subscribeModal.onOpen()
+    }
     return uploadModal.onOpen()
   }
 
