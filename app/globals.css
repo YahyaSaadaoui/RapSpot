@@ -9,3 +9,8 @@ height:100%;
 background-color:black;
 color-scheme: dark;
 }
+
+.span.absolute.bg-white.rounded-full.h-full{
+   background-color:#065f46 !important;
+   /* bg-[#065f46] */
+}

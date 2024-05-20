@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Sure! Below is a sample `README.md` file that you can use to guide users through setting up and running your Next.js application with Docker.
 
-## Getting Started
+```markdown
+# Next.js Supabase Application with Docker
 
-First, run the development server:
+This repository contains a Next.js application connected to a Supabase database and storage. The application is containerized using Docker for easy setup and deployment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Prerequisites
+- Node 20 or higher
+- Docker installed on your machine. [Get Docker](https://www.docker.com/get-started)
+- A Supabase project with the necessary API URL and anonymous key.
+
+## Setup
+
+### 1. Clone the Repository
+
+```sh
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Create an `.env` File
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a `.env` file in the root directory of the project with the following content:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
 
-## Learn More
+Replace `your-supabase-url` and `your-supabase-anon-key` with your actual Supabase project credentials.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Build and Run the Docker Container
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Method 1: Using Docker CLI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Build the Docker Image**:
 
-## Deploy on Vercel
+    ```sh
+    docker build -t nextjs-supabase-app .
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Run the Docker Container**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```sh
+    docker run -p 3000:3000 --env-file .env nextjs-supabase-app
+    ```
+
+#### Method 2: Using Docker Compose
+
+1. **Create a `docker-compose.yml` File**:
+
+    ```yaml
+    version: '3'
+    services:
+      nextjs:
+        image: nextjs-supabase-app
+        build: .
+        ports:
+          - '3000:3000'
+        env_file:
+          - .env
+    ```
+
+2. **Build and Start the Services**:
+
+    ```sh
+    docker-compose up --build
+    ```
+
+## Access the Application
+
+Once the container is running, open your browser and go to:
+
+```
+http://localhost:3000
+```
+
+You should see your Next.js application running.
+
+## Pushing to Docker Hub
+
+To share the Docker image, you can push it to Docker Hub.
+
+1. **Login to Docker Hub**:
+
+    ```sh
+    docker login
+    ```
+
+2. **Tag the Image**:
+
+    ```sh
+    docker tag nextjs-supabase-app your-dockerhub-username/nextjs-supabase-app
+    ```
+
+3. **Push the Image**:
+
+    ```sh
+    docker push your-dockerhub-username/nextjs-supabase-app
+    ```
+
+4. **Share the Image**:
+
+    Share the Docker image link (e.g., `docker pull your-dockerhub-username/nextjs-supabase-app`) with others so they can run the container locally.
+
+## Security Considerations
+
+- Ensure your `.env` file is listed in `.gitignore` and `.dockerignore` to prevent sensitive information from being committed to your version control or included in the Docker image.
+
+    **.gitignore**:
+    ```gitignore
+    .env
+    ```
+
+    **.dockerignore**:
+    ```dockerignore
+    .env
+    node_modules
+    npm-debug.log
+    Dockerfile
+    .dockerignore
+    ```
+
+## License
+
+This project is licensed under the MIT License.
+```
+
+This `README.md` provides a comprehensive guide for users to set up and run your Dockerized Next.js application. Make sure to update the repository URL, Docker Hub username, and any other placeholders with your actual information.

@@ -140,7 +140,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
             className="text-neutral-400 cursor-pointer hover:text-white transition"
           />
         </div>
-        <div className="flex items-center gap-x-2 w-full">
+        <div className="flex items-center gap-x-2 w-full text-[#1aa553]">
           <span className="text-white">{formatTime(currentTime)}</span>
           <Slider
             value={currentTime}
