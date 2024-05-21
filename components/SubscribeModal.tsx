@@ -45,10 +45,10 @@ const SubscribeModal: React.FC<SubscribeModalProps> = ({ products }) => {
       return toast.error("Must be logged in")
     }
 
-    if (subscription) {
-      setPriceIdLoading(undefined)
-      return toast("Already subscribed")
-    }
+    // if (subscription) {
+    //   setPriceIdLoading(undefined)
+    //   return toast("Already subscribed")
+    // }
 
     try {
       const { sessionId } = await postData({

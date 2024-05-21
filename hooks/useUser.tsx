@@ -38,7 +38,7 @@ export const MyUserContextProvider = (props: Props) => {
 
         if (userDetailsPromise.status === "fulfilled") setUserDetails(userDetailsPromise.value.data as UserDetails)
 
-        if (subscriptionPromise.status === "fulfilled") setSubscription(subscriptionPromise.value.data as Subscription)
+        // if (subscriptionPromise.status === "fulfilled") setSubscription(subscriptionPromise.value.data as Subscription)
 
         setIsloadingData(false)
       })
