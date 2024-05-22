@@ -1,5 +1,3 @@
-Sure! Below is a sample `README.md` file that you can use to guide users through setting up and running your Next.js application with Docker.
-
 ```markdown
 # Next.js Supabase Application with Docker
 
@@ -13,8 +11,6 @@ This repository contains a Next.js application connected to a Supabase database 
 ## Setup
 
 ### 1. Clone the Repository
-
-```sh
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 ```
@@ -124,7 +120,4 @@ To share the Docker image, you can push it to Docker Hub.
 
 ## License
 
-This project is licensed under the MIT License.
-```
-
-This `README.md` provides a comprehensive guide for users to set up and run your Dockerized Next.js application. Make sure to update the repository URL, Docker Hub username, and any other placeholders with your actual information.
+[![license](https://img.shields.io/github/license/helloukey/mymovies?style=for-the-badge)](LICENSE)
