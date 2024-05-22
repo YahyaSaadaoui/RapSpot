@@ -5,31 +5,25 @@ import { useEffect, useState } from "react";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs";
 import { HiSpeakerWave, HiSpeakerXMark } from "react-icons/hi2";
 import { AiFillStepBackward, AiFillStepForward } from "react-icons/ai";
-import { MdPlaylistAdd } from "react-icons/md";
+
 import { Song } from "@/types";
-import usePlaylistSongs from "@/hooks/usePlaylistSongs";
 import usePlayer from "@/hooks/usePlayer";
 
 import LikeButton from "./LikeButton";
 import MediaItem from "./MediaItem";
 import Slider from "./Slider";
-import { toast } from "react-hot-toast";
-import { useSupabaseClient } from "@supabase/auth-helpers-react"
 
 interface PlayerContentProps {
   song: Song;
   songUrl: string;
-  playlistId: string;
 }
 
-const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl , playlistId}) => {
+const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
   const player = usePlayer();
   const [volume, setVolume] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const supabaseClient = useSupabaseClient();
-   const { playlistSongs } = usePlaylistSongs(playlistId);
 
   const Icon = isPlaying ? BsPauseFill : BsPlayFill;
   const VolumeIcon = volume === 0 ? HiSpeakerXMark : HiSpeakerWave;
@@ -117,18 +111,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl , playlistI
     const seconds = Math.floor(time % 60).toString().padStart(2, "0");
     return `${minutes}:${seconds}`;
   };
-  const handleAddToPlaylist = async () => {
-    const { error } = await supabaseClient
-      .from('playlist_songs')
-      .insert({ playlist_id: playlistId, song_id: song.id });
 
-    if (error) {
-      toast.error('Failed to add to playlist');
-    } else {
-      toast.success('Added to playlist');
-    }
-  };
-  
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
       <div className="flex w-full justify-start">
@@ -156,11 +139,6 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl , playlistI
             size={30}
             className="text-neutral-400 cursor-pointer hover:text-white transition"
           />
-          <MdPlaylistAdd
-            onClick={handleAddToPlaylist}
-            size={30}
-            className="text-neutral-400 cursor-pointer hover:text-white transition"
-          />
         </div>
         <div className="flex items-center gap-x-2 w-full text-[#1aa553]">
           <span className="text-white">{formatTime(currentTime)}</span>
@@ -169,7 +147,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl , playlistI
             onChange={handleTimeChange}
             max={duration}
             step={1}
-            aria-label="Time"
+            aria-Label="Time"
           />
           <span className="text-white">{formatTime(duration)}</span>
         </div>
@@ -178,7 +156,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl , playlistI
       <div className="hidden md:flex w-full justify-end pr-2">
         <div className="flex items-center gap-x-2 w-[120px]">
           <VolumeIcon onClick={toggleMute} className="cursor-pointer" size={34} />
-          <Slider value={volume} onChange={(value) => setVolume(value)} aria-label="Volume" />
+          <Slider value={volume} onChange={(value) => setVolume(value)} aria-Label="Volume" />
         </div>
       </div>
     </div>

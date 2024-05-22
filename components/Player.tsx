@@ -27,7 +27,7 @@ const Player = () => {
         h-[80px] 
         px-4
       ">
-      <PlayerContent key={songUrl} song={song} songUrl={songUrl} playlistId="your-playlist-id" />
+      <PlayerContent key={songUrl} song={song} songUrl={songUrl}/>
     </div>
   )
 }

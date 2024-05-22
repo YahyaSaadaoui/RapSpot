@@ -64,76 +64,7 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
-      };
-      playlists: {
-        Row: {
-          id: string;
-          user_id: string;
-          name: string;
-          description: string | null;
-          created_at: string | null;
-        };
-        Insert: {
-          id: string;
-          user_id: string;
-          name: string;
-          description?: string | null;
-          created_at?: string | null;
-        };
-        Update: {
-          id?: string;
-          user_id?: string;
-          name?: string;
-          description?: string | null;
-          created_at?: string | null;
-        };
-        Relationships: [
-          {
-            foreignKeyName: "playlists_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referencedRelation: "users";
-            referencedColumns: ["id"];
-          }
-        ];
-      };
-      playlist_songs: {
-        Row: {
-          id: string;
-          name: string;
-          playlist_id: string;
-          song_id: string;
-          created_at: string | null;
-        };
-        Insert: {
-          id: string;
-          playlist_id: string;
-          song_id: string;
-          created_at?: string | null;
-        };
-        Update: {
-          id?: string;
-          playlist_id?: string;
-          song_id?: string;
-          created_at?: string | null;
-        };
-        Relationships: [
-          {
-            foreignKeyName: "playlist_songs_playlist_id_fkey";
-            columns: ["playlist_id"];
-            isOneToOne: false;
-            referencedRelation: "playlists";
-            referencedColumns: ["id"];
-          },
-          {
-            foreignKeyName: "playlist_songs_song_id_fkey";
-            columns: ["song_id"];
-            isOneToOne: false;
-            referencedRelation: "songs";
-            referencedColumns: ["id"];
-          }
-        ];
-      };
+      }
       prices: {
         Row: {
           active: boolean | null
