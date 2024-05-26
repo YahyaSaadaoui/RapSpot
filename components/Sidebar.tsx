@@ -6,7 +6,7 @@ import { HiHome } from "react-icons/hi"
 import { BiSearch } from "react-icons/bi"
 import { twMerge } from "tailwind-merge"
 import Box from "./Box"
-
+import ListItem from "./ListItem"
 import SidebarItem from "./SidebarItem"
 import Library from "./Library"
 import { Song } from "@/types"
@@ -49,11 +49,15 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
             {routes.map(item => (
               <SidebarItem key={item.label} {...item} />
             ))}
+      <ListItem image="/images/liked.png" name="Liked Songs" href="liked"/>
+
           </div>
         </Box>
         <Box className="overflow-y-auto h-full">
           <Library songs={songs} />
+
         </Box>
+              
       </div>
       <main className="h-full flex-1 overflow-y-auto py-2">{children}</main>
     </div>
