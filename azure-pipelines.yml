@@ -1,3 +1,5 @@
+# azure-pipelines.yml
+
 trigger:
   branches:
     include:
@@ -10,7 +12,7 @@ jobs:
 - job: BuildAndTest
   displayName: 'Build and Test Node.js 18 Application'
   steps:
-  - task: UseNode@2
+  - task: NodeTool@0
     inputs:
       versionSpec: '18.x'
       checkLatest: true
