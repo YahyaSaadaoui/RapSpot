@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clear-cache": "rm -rf .next",
+    "clearing": "rm -rf .next",
     "update-types": "pnpx supabase gen types typescript --project-id eqhntdpwtnhqzcnpxegh > app/interfaces/types_db.ts"
   },
   "dependencies": {
@@ -43,7 +43,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
     "eslint-config-next": "^13.4.5",
-    "next": "^14.0.1-canary.2",
+    "next": "^13.4.0",
     "postcss": "^8.4.24",
     "query-string": "^8.1.0",
     "stripe": "^12.18.0",

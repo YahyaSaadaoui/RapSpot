@@ -1,7 +1,7 @@
 version: '3'
 services:
   nextjs:
-    image: your-dockerhub-username/nextjs-supabase-app
+    image: yahyasaadaoui/rapspot
     ports:
       - '3000:3000'
     env_file:
